@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ 
+    <script>
+        // 토글 버튼 작동
+        $(function(){
+            $(".headC").click(function(){
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <title>MealChecker</title>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <div class="container-small">
+                <!-- 작은 화면의 배치를 위한 컨테이너-->
+                <a href="index.html" class="headA">MealChecker</a>
+                <!-- 메뉴 토글 버튼 -->
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div> <!-- end container-small -->
+            <!-- 내비게이션 메뉴 -->
+            <nav class="headB">
+                <ul>
+                    <li><a href="searchDiet.html">calculator</a></li>
+                    <li><a href="https://ourcalc.com/%EA%B8%B0%EC%B4%88%EB%8C%80%EC%82%AC%EB%9F%89-%EA%B3%84%EC%82%B0%EA%B8%B0/">story</a></li>
+                </ul>
+            </nav>
+        </div><!-- end container -->
+    </header>
+
+
+    <!-- 본 컨텐츠 -->
+    <div id="wrapper">
+        <!-- 컨텐츠A-->
+        <section id="conA">
+            <div class="container">
+                <!-- 히어로 이미지 -->
+                <img src="" alt="">
+                <h1>MealChecker</h1>
+                <P>PT쌤이 만든, 맞춤 다이어트 식단 솔루션</P>
+                <button id="getStartBtn" type ="button" onClick="location.href='form.html'">
+                    Get started
+                    <div class="icon">
+                      <svg
+                        height="24"
+                        width="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                          d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </div>
+                </button>
+            
+            </div>
+        </section>
+    </div>
+
+        <!-- 푸터 -->
+        <footer>
+            <div class="container">
+                <!-- 푸터A : 사이트 정보 -->
+                <div class="footA">
+                    <h2>MealChecker</h2>
+                    <p>
+                        주소: IT 전문교육 학원<br>
+                        <a href="http://MealChecker.net/">http://MealChecker.net</a>
+                    </p>
+                    <!-- 푸터D : SNS 아이콘 -->
+                    <nav class="footD">
+                        <ul>
+                            <li><a href="#"><span class="fa fa-twitter" title="Twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-facebook" title="Facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-google-plus" title="Google Plus"></span></a></li>
+                            <li><a href="#"><span class="fa fa-instagram" title="Instagram"></span></a></li>
+                            <li><a href="#"><span class="fa fa-youtube" title="YouTube"></span></a></li>
+                        </ul>
+                    </nav>
+                </div> <!-- end footA -->
+                <!-- 푸터B : 푸터 메뉴 -->
+                <nav class="footB">
+                    <div>
+                        <h3>ABOUT</h3>
+                        <ul>
+                            <li><a href="#">설립</a></li>
+                            <li><a href="#">주소</a></li>
+                            <li><a href="#">지도</a></li>
+                            <li><a href="#">스태프</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>SUPPORT</h3>
+                        <ul>
+                            <li><a href="#">다운로드</a></li>
+                            <li><a href="#">매뉴얼</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                            <li><a href="#">문의</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>CONTENTS</h3>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">비즈니스</a></li>
+                            <li><a href="#">프로필</a></li>
+                            <li><a href="#">개발자</a></li>
+                            <li><a href="#">블로그</a></li>
+                        </ul>
+                    </div>
+                </nav> <!-- end footB -->
+                <!-- 푸터C : 저작권-->
+                <div class="footC">
+                    © MealChecker corp. All rights reserved.
+                </div>
+            </div> <!-- end container -->
+        </footer>
+    </div>
+</body>
+
+</html>

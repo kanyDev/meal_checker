@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+
+/* 검색창 */
+.searchBox {
+    margin-left: 90px;
+    display: flex;
+    width: 80vh;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+}
+
+.searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/*hover effect*/
+.searchButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/*button pressing effect*/
+.searchButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+}
+
+
+/* 확인받기 버튼 */
+#gotoCheck {
+    margin-top: 50px;
+    margin-left: 900px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px -1px #977ef3, 0 2px 4px -1px #977ef3;
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: #7b57ff;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #7b57ff;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+#gotoCheck:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+#gotoCheck:hover .icon {
+    transform: translate(4px);
+}
+
+#gotoCheck:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+#gotoCheck::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%);
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+
+#searchDiet {
+    margin-top: 170px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 20px;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex; 
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* 기본 색상 */
+:root {
+    --main-color: #A566FF;
+    --accent-color: #A566FF;
+    --dark-main-color: #2B5566;
+    --text-bright-color: #fff;
+    --icon-color: #fff;
+    --icon-bk-color: #ddd;
+    --large-width: 1000px;
+}
+
+/* 헤더 */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 헤더A: 사이트 이름 */
+.headA {
+    display: inline-block;
+    line-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: #C90000; */
+    background-color: var(--main-color);
+    color: #fff;
+    color: var(--text-bright-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* 헤더B: 네비게이션 메뉴 */
+.headB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headB a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.headB a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 기본 설정: 페이지 전체 */
+body {
+    margin: 0;
+    font-family: '맑은 고딕',
+        'Apple SD Gothic Neo',
+        sans-serif;
+}
+
+/* 콘텐츠A */
+.conA {
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+
+    height: 150vh;
+    min-height: 450px;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+
+
+
+/* 헤더C: 토글 버튼 */
+@media (max-width: 767px) {
+
+    /* 768 이하 */
+    /* 작은 화면 전용 설정 */
+    header .container-small {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* 토글 버튼 스타일 */
+    .headC {
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 28px;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .headC:hover {
+        opacity: 0.3;
+    }
+
+    /* 작은 화면에선 메뉴 감추기 */
+    .headB {
+        display: none;
+    }
+
+    #searchDiet {
+        width: 55vh;
+    }
+
+    .searchBox {
+        margin-left: 0;
+        width: 50vh;
+
+    }
+
+    #gotoCheck {
+        margin-left: 200px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    /* 768 이상 (pc) */
+    /* 큰 화면에서 토글 버튼 안보이기 */
+    .headC {
+        display: none;
+    }
+
+    header .container {
+        /* 사이트이름 과 내비게이션 메뉴를 각각 왼쪽/오른쪽으로 배치하기 */
+        display: flex;
+        align-items: center;
+        /* 세로 방향으로 중앙 정렬 */
+        justify-content: space-between;
+        /* 왼쪽 오른쪽 끝방향으로 정렬 */
+
+        /* 하단 컨텐츠와 너비 맞추기*/
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 큰 화면에선 메뉴 보이기 */
+    .headB {
+        display: block !important;
+    }
+
+    /* 링크를 가로로 정렬 */
+    .headB ul {
+        display: flex;
+    }
+
+
+    .conA h1 {
+        font-size: 115px;
+    }
+
+
+}

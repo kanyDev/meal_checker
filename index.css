@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+/* 기본 색상 */
+:root {
+    --main-color: #A566FF;
+    --accent-color: #A566FF;
+    --dark-main-color: #2B5566;
+    --text-bright-color: #fff;
+    --icon-color: #fff;
+    --icon-bk-color: #ddd;
+    --large-width: 1000px;
+}
+
+/* 헤더 */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 헤더A: 사이트 이름 */
+.headA {
+    display: inline-block;
+    line-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: #C90000; */
+    background-color: var(--main-color);
+    color: #fff;
+    color: var(--text-bright-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* 헤더B: 네비게이션 메뉴 */
+.headB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headB a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.headB a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 기본 설정: 페이지 전체 */
+body {
+    margin: 0;
+    font-family: '맑은 고딕',
+        'Apple SD Gothic Neo',
+        sans-serif;
+    justify-content: center;
+}
+
+
+
+/* 콘텐츠A: 히어로 이미지 */
+#conA {
+    text-align: center;
+    background-color: #FAF4C0;
+    background-position: center;
+    background-size: cover;
+
+    height: 100vh;
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-bright-color);
+}
+
+#conA h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--accent-color);
+    letter-spacing: 0.2em;
+    margin-left: 0.2em;
+}
+
+#conA p {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+
+}
+
+/* get started 버튼 */
+#getStartBtn {
+    margin-left: 300px;
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+#getStartBtn .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+#getStartBtn:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+#getStartBtn .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+}
+
+#getStartBtn:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+#getStartBtn:active .icon {
+    transform: scale(0.95);
+}
+
+/* 푸터 */
+footer {
+    background-color: #6E2FC7;
+    color: #fff;
+    color: var(--text-bright-color);
+}
+
+footer .container {
+    padding: 40px 20px;
+    /*안쪽 여백*/
+}
+
+/* 푸터A : 사이트 정보 */
+.footA {
+    margin-bottom: 30px;
+}
+
+.footA h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footA p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footA a {
+    color: inherit;
+    /* 부모요소의 색상 사용 */
+    text-decoration: none;
+}
+
+/* 푸터B : 푸터 메뉴 */
+.footB h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px currentColor;
+    font-size: 14px;
+}
+
+.footB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footB a {
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.footB a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 푸터B : 푸터 메뉴 */
+.footB div {
+    margin-bottom: 20px;
+}
+
+/* 푸터C: 저작권 */
+.footC {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 푸터D: SNS 메뉴 */
+.footD {
+    margin-top: 20px;
+}
+
+.footD ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* 아이콘 가로 정렬 */
+}
+
+.footD a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    padding: 0;
+    /* 아이콘을 둥근 테두리 감싸기 */
+    border: solid 1px currentColor;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+
+    margin-right: 8px;
+    /* 아이콘간 간격 */
+}
+
+.footD a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 헤더C: 토글 버튼 */
+@media (max-width: 767px) {
+
+    /* 768 이하 */
+    /* 작은 화면 전용 설정 */
+    header .container-small {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* 토글 버튼 스타일 */
+    .headC {
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 28px;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .headC:hover {
+        opacity: 0.3;
+    }
+
+    /* 작은 화면에선 메뉴 감추기 */
+    .headB {
+        display: none;
+    }
+
+    #conA h1 {
+        font-size: 70px;
+    }
+
+    #conA p {
+        font-size: 30px;
+    }
+
+    #getStartBtn {
+        margin-left: 180px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* 768 이상 (pc) */
+    /* 큰 화면에서 토글 버튼 안보이기 */
+    .headC {
+        display: none;
+    }
+
+    header .container {
+        /* 사이트이름 과 내비게이션 메뉴를 각각 왼쪽/오른쪽으로 배치하기 */
+        display: flex;
+        align-items: center;
+        /* 세로 방향으로 중앙 정렬 */
+        justify-content: space-between;
+        /* 왼쪽 오른쪽 끝방향으로 정렬 */
+
+        /* 하단 컨텐츠와 너비 맞추기*/
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 큰 화면에선 메뉴 보이기 */
+    .headB {
+        display: block !important;
+    }
+
+    /* 링크를 가로로 정렬 */
+    .headB ul {
+        display: flex;
+    }
+
+
+    #conA h1 {
+        font-size: 90px;
+    }
+
+    #conA p {
+        font-size: 24px;
+    }
+
+
+
+
+    .footB {
+        display: flex;
+    }
+
+    /* div 들의 비율 1:1:1 로 만들기 */
+    .footB div {
+        flex: 1;
+    }
+
+    /* 메뉴 사이의 여백 확보 */
+    .footB div:not(:first-child) {
+        margin-left: 40px;
+    }
+
+    /* 768px 이상의 화면에서는 */
+    footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* */
+        /* 위 쪽의 컨텐츠와 너비 맞추기 */
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footA {
+        flex: 0 0 40%;
+    }
+
+    /* 사이트정보 40% */
+    .footB {
+        flex: 0 0 60%;
+    }
+
+    /* 푸터 메뉴 60% */
+    .footC {
+        flex: 0 0 100%;
+    }
+
+    /* 저작권 100% */
+
+}

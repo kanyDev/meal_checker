@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+    <script src="https://use.fontawesome.com/926fe18a63.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // 토글 버튼 작동
+        $(function(){
+            $(".headC").click(function(){
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <title>MealChecker</title>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <div class="container-small">
+                <!-- 작은 화면의 배치를 위한 컨테이너-->
+                <a href="index.html" class="headA">MealChecker</a>
+                <!-- 메뉴 토글 버튼 -->
+                <button type="button" class="headC">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+            </div> <!-- end container-small -->
+            <!-- 내비게이션 메뉴 -->
+            <nav class="headB">
+                <ul>
+                    <li><a href="searchDiet.html">calculator</a></li>
+                    <li><a href="contents.html">story</a></li>
+                </ul>
+            </nav>
+        </div><!-- end container -->
+    </header>
+
+    <!--폼 ModalWrapper -->
+    <div id="modalWrapper">
+        <form class="frm">
+            <div class="gender-card">
+                <p class="heading">성별을 선택해주세요</p>
+                <div id="radio-wrapper">
+                    <input class="gender-radio-buttons" id="male" value="male" name="gender" type="radio" />
+                    <label class="genderlabel malebutton" for="male">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 90"
+                            class="smallsvg malesmallsvg">
+                            <circle stroke-width="6" stroke="#76E3FE" r="22" cy="25" cx="25"></circle>
+                            <path stroke-linecap="round" stroke-width="6" stroke="#76E3FE" d="M25 47L25 87"></path>
+                            <path stroke-linecap="round" stroke-width="6" stroke="#76E3FE" d="M25 86.6958L38.6958 73">
+                            </path>
+                            <path stroke-linecap="round" stroke-width="6" stroke="#76E3FE" d="M11 73L24.6958 86.6958">
+                            </path>
+                        </svg>
+                        >Male
+                    </label>
+                    <input class="gender-radio-buttons" id="female" value="female" name="gender" type="radio" />
+                    <label class="genderlabel femalebutton" for="female">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 90" class="smallsvg">
+                            <circle stroke-width="6" stroke="#F57CB3" r="22" cy="25" cx="25"></circle>
+                            <path stroke-linecap="round" stroke-width="6" stroke="#F57CB3" d="M25 47L25 87"></path>
+                            <path stroke-linecap="round" stroke-width="6" stroke="#F57CB3" d="M12 73H38"></path>
+                        </svg>
+                        >Female
+                    </label>
+                </div>
+            </div> <!-- end  gender-card-->
+            <div class="born-year">
+                <p class="heading">출생년도를 입력해주세요</p>
+                <p class="input-container">
+                    <input type="number" placeholder="예) 1999" name="born-year-input" id="born-year-input" class="input-field" autocomplete="name">
+                    <label class="input-label" for="born-year-input">출생년도</label>
+                    <!-- 1960~2010년 사이로 입력해주세요 -->
+                </p>
+            </div> <!-- end born-year-->
+            <div class="weight-height">
+                <p class="heading">키와 체중을 알려주세요</p>
+                <div class="height">
+                    <p class="p-weight-height">현재 키</p>
+                    <p class="input-container">
+                        <input type="number" placeholder="162cm" name="height-input" id="height-input" class="input-field" autocomplete="name">
+                        <label class="input-label" for="height-input">현재 키</label>
+                    </p>
+                </div>
+                <div class="weight">
+                    <p class="p-weight-height">현재 체중</p>
+                    <p class="input-container">
+                        <input type="number" placeholder="52.0kg" name="weight-input" id="weight-input" class="input-field" autocomplete="name">
+                        <label class="input-label" for="weight-input">현재 체중</label>
+                    </p>
+                </div>
+            </div><!-- end weight-height-->
+            <div class="workout">
+                <p class="heading">얼마나 움직이시나요?</p>
+                <div id="radio-group">
+                <input type="radio" id="radio1" name="radio-group" class="radio-input">
+                <label for="radio1" class="radio-label">
+                    <span class="radio-inner-circle"></span>
+                    좌식(운동을 거의 또는 전혀 하지 않음)
+                </label>
+
+                <input type="radio" id="radio2" name="radio-group" class="radio-input">
+                <label for="radio2" class="radio-label">
+                    <span class="radio-inner-circle"></span>
+                    가벼운 운동(주 1~3일)
+                </label>
+
+                <input type="radio" id="radio3" name="radio-group" class="radio-input">
+                <label for="radio3" class="radio-label">
+                    <span class="radio-inner-circle"></span>
+                    적당히 활동적(주 3~5일)
+                </label>
+
+                <input type="radio" id="radio4" name="radio-group" class="radio-input">
+                <label for="radio4" class="radio-label">
+                    <span class="radio-inner-circle"></span>
+                    매우 활동적(주 5~6일)
+                </label>
+
+                <input type="radio" id="radio5" name="radio-group" class="radio-input">
+                <label for="radio5" class="radio-label">
+                    <span class="radio-inner-circle"></span>
+                    매우 적극적으로 운동(주 6~7일)
+                </label>
+                </div>
+                
+                <button id="applyNow" type="button" onclick="redirect()">
+                    Apply Now
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                      <path
+                        clip-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                </button>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
